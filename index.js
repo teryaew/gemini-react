@@ -15,7 +15,12 @@ module.exports = function(gemini, options) {
             });
     });
 
-    gemini.on('endRunner', () => server.stop());
+    gemini.on('endRunner', () => {
+        'gemini-react: endRunner';
+        console.log(gemini);
+        console.log('-----------');
+        return server.stop();
+    });
 };
 
 function setRootUrl(config, url) {
