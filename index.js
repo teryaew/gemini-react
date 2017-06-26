@@ -16,7 +16,7 @@ module.exports = function(gemini, options) {
     });
 
     gemini.on('endRunner', () => {
-        'gemini-react: endRunner';
+        console.log('gemini-react: endRunner');
         console.log(gemini);
         console.log('-----------');
         return server.stop();
